@@ -1,0 +1,49 @@
+<!DOCTYPE HTML> 
+<html> 
+
+<head> 
+	<title> 
+		SAX plots 
+	</title>	 
+</head> 
+
+<body id = "body" style = "text-align:center;"> 
+	
+	<h1 style = "color:blue;" > 
+		Symbolic aggregate approximation Plots
+	</h1> 
+	
+	<p id = "GFG_UP" style = 
+			"font-size: 15px; font-weight: bold;"> 
+	</p> 
+	<form>
+        <label for="inputBox"> Enter the time of the figure here</label></br>
+		<input type="text" id = "figid" name = "inputBox"/></br></br>
+		<input type = "button" onclick = "fun()"  value="click here"/></br>
+    </form>
+	
+	
+	<p id = "GFG_DOWN" style = 
+			"color:blue; font-size: 20px; font-weight: bold;"> 
+	</p> 
+	
+	<script>
+		var up = document.getElementById('GFG_UP'); 
+		up.innerHTML = "Click on the button to get the required plot";
+		
+		var down = document.getElementById('GFG_DOWN');
+        
+		
+		function fun(){ 
+			var img = document.createElement('img');
+			var imageId = document.getElementById('figid').value;
+			window.alert('https://sax-plots.s3.amazonaws.com/SAX_GRAPHS_PLOTYLY/'.concat(imageId).concat('.jpeg')); 
+			img.src = 
+'https://sax-plots.s3.amazonaws.com/SAX_GRAPHS_PLOTYLY/'.concat(imageId).concat('.jpeg'); 
+			document.getElementById('body').appendChild(img); 
+			// down.innerHTML = "Image Element Added."; 
+		}
+	</script> 
+</body> 
+
+</html> 
